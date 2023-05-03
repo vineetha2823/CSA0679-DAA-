@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+	char str1[10],str2[10];
+	int i,j,k;
+	printf("enter a word: ");
+	scanf("%s",str1);
+	i=0;
+	while(str1[i]!='\0')
+	i++;
+	j=i-1;
+	k=0;
+	while (j>=0)
+	{
+		str2[k]=str1[j];
+		k++;
+		j--;
+	}
+	str2[k]='\n';
+	if(strcmp(str1,str2)==1)
+	printf("The given string is not palindrome");
+	else
+	printf("The given string is palindrome");
+}
